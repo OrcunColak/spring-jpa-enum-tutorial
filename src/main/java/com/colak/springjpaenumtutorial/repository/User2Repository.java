@@ -1,6 +1,5 @@
 package com.colak.springjpaenumtutorial.repository;
 
-import com.colak.springjpaenumtutorial.jpa.User;
 import com.colak.springjpaenumtutorial.jpa.User2;
 import org.springframework.data.jpa.repository.JpaRepository;
 
