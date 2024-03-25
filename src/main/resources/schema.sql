@@ -25,3 +25,11 @@ CREATE TABLE users3 (
   PRIMARY KEY (id)
 );
 
+DROP TABLE IF EXISTS users4;
+CREATE TABLE IF NOT EXISTS users4 (
+     id BIGINT NOT NULL,
+    name VARCHAR(255),
+    role CHAR(1),
+    PRIMARY KEY (id)
+);
+
