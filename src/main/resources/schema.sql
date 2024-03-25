@@ -1,0 +1,27 @@
+ DROP TABLE IF EXISTS users1;
+ CREATE TABLE users1 (
+   id BIGINT NOT NULL,
+   name VARCHAR(255),
+   role VARCHAR(255) CHECK (role IN ('TEACHER','STUDENT')),
+   PRIMARY KEY (id)
+);
+
+ DROP TABLE IF EXISTS users2;
+ CREATE TABLE users2 (
+   id BIGINT NOT NULL,
+   name VARCHAR(255),
+   role INTEGER,
+   PRIMARY KEY (id)
+);
+
+DROP TABLE IF EXISTS users3;
+DROP TYPE IF EXISTS Role;
+CREATE TYPE Role AS ENUM ('TEACHER','STUDENT');
+
+CREATE TABLE users3 (
+  id BIGINT NOT NULL,
+  name VARCHAR(255),
+  role Role,
+  PRIMARY KEY (id)
+);
+

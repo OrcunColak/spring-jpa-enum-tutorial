@@ -10,21 +10,14 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * A check constraint is created
- * <p>
- * CREATE TABLE users (
- * id BIGINT NOT NULL,
- * name VARCHAR(255),
- * role VARCHAR(255) CHECK (role IN ('TEACHER','STUDENT')),
- * PRIMARY KEY (id)
- * )
+ * In this case enum is as VARCHAR(255)
  */
 @Entity
-@Table(name = "users")
+@Table(name = "users1")
 
 @Getter
 @Setter
-public class User {
+public class User1 {
 
     @Id
     @Column(name = "id")

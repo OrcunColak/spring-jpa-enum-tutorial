@@ -1,23 +1,29 @@
 package com.colak.springjpaenumtutorial.jpa;
 
+import jakarta.persistence.Basic;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.type.SqlTypes;
 
 /**
- * In this case enum is a INTEGER
+ * In this case enum is a SQL Type
  */
+
 @Entity
-@Table(name = "users2")
+@Table(name = "users3")
 
 @Getter
 @Setter
-public class User2 {
+@AllArgsConstructor
+@NoArgsConstructor
+public class User3 {
 
     @Id
     @Column(name = "id")
@@ -27,6 +33,7 @@ public class User2 {
     private String name;
 
     @Column(name = "role")
-    @Enumerated(EnumType.ORDINAL)
+    @JdbcTypeCode(SqlTypes.NAMED_ENUM)
+    @Basic(optional = false)
     private Role role;
 }
